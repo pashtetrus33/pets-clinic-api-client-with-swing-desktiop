@@ -5,6 +5,11 @@
 Если вам тяжело работать в рамках языка C#, вы можете поработать с вашим сервисом в рамках языка Java,
 постараться протестировать работу вашего сервиса (вызвать несколько методов), создав ЛЮБОЙ клиент (можно обычный, консольный).
 
+![1](https://github.com/pashtetrus33/pets-clinic-api-client-with-swing-desktiop/assets/86385554/7f799f44-67e4-4171-9641-4fa36136dd09)
+![2](https://github.com/pashtetrus33/pets-clinic-api-client-with-swing-desktiop/assets/86385554/e38c999e-5c23-466a-9e13-56b9d70fecd0)
+![3](https://github.com/pashtetrus33/pets-clinic-api-client-with-swing-desktiop/assets/86385554/65eb1440-f78a-4d63-99f1-72f9c2832499)
+![4](https://github.com/pashtetrus33/pets-clinic-api-client-with-swing-desktiop/assets/86385554/284da629-a997-4516-9c7a-ea0a56e67736)
+
 # openapi-java-client
 
 OpenAPI definition

@@ -52,34 +52,6 @@ Add this dependency to your project's POM:
 </dependency>
 ```
 
-### Gradle users
-
-Add this dependency to your project's build file:
-
-```groovy
-  repositories {
-    mavenCentral()     // Needed if the 'openapi-java-client' jar has been published to maven central.
-    mavenLocal()       // Needed if the 'openapi-java-client' jar has been published to the local maven repo.
-  }
-
-  dependencies {
-     implementation "org.openapitools:openapi-java-client:v0"
-  }
-```
-
-### Others
-
-At first generate the JAR by executing:
-
-```shell
-mvn clean package
-```
-
-Then manually install the following JARs:
-
-* `target/openapi-java-client-v0.jar`
-* `target/lib/*.jar`
-
 ## Getting Started
 
 Please follow the [installation](#installation) instruction and execute the following Java code:

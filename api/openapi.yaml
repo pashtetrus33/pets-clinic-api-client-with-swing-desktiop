@@ -1,0 +1,464 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- description: Generated server url
+  url: http://localhost:8080
+paths:
+  /api/v1/clinic/pets/update/{petId}:
+    put:
+      operationId: create
+      parameters:
+      - explode: false
+        in: path
+        name: petId
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PetRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                format: int32
+                type: integer
+          description: OK
+      tags:
+      - pet-controller
+      x-content-type: application/json
+      x-accepts: '*/*'
+  /api/v1/clinic/consultations/update/{consultationId}:
+    put:
+      operationId: create_1
+      parameters:
+      - explode: false
+        in: path
+        name: consultationId
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConsultationRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                format: int32
+                type: integer
+          description: OK
+      tags:
+      - consultation-controller
+      x-content-type: application/json
+      x-accepts: '*/*'
+  /api/v1/clinic/clients/update/{clientId}:
+    put:
+      operationId: create_2
+      parameters:
+      - explode: false
+        in: path
+        name: clientId
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClientRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                format: int32
+                type: integer
+          description: OK
+      tags:
+      - client-controller
+      x-content-type: application/json
+      x-accepts: '*/*'
+  /api/v1/clinic/pets/create:
+    post:
+      operationId: create_3
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PetRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                format: int32
+                type: integer
+          description: OK
+      tags:
+      - pet-controller
+      x-content-type: application/json
+      x-accepts: '*/*'
+  /api/v1/clinic/consultations/create:
+    post:
+      operationId: create_4
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConsultationRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                format: int32
+                type: integer
+          description: OK
+      tags:
+      - consultation-controller
+      x-content-type: application/json
+      x-accepts: '*/*'
+  /api/v1/clinic/clients/create:
+    post:
+      operationId: create_5
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClientRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                format: int32
+                type: integer
+          description: OK
+      tags:
+      - client-controller
+      x-content-type: application/json
+      x-accepts: '*/*'
+  /api/v1/clinic/pets/getbyid/{petId}:
+    get:
+      operationId: getById
+      parameters:
+      - explode: false
+        in: path
+        name: petId
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Pet'
+          description: OK
+      tags:
+      - pet-controller
+      x-accepts: '*/*'
+  /api/v1/clinic/pets/getall:
+    get:
+      operationId: showAll
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  $ref: '#/components/schemas/Pet'
+                type: array
+          description: OK
+      tags:
+      - pet-controller
+      x-accepts: '*/*'
+  /api/v1/clinic/consultations/getbyid/{consultationId}:
+    get:
+      operationId: getById_1
+      parameters:
+      - explode: false
+        in: path
+        name: consultationId
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Consultation'
+          description: OK
+      tags:
+      - consultation-controller
+      x-accepts: '*/*'
+  /api/v1/clinic/consultations/getall:
+    get:
+      operationId: showAll_1
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  $ref: '#/components/schemas/Consultation'
+                type: array
+          description: OK
+      tags:
+      - consultation-controller
+      x-accepts: '*/*'
+  /api/v1/clinic/clients/getbyid/{clientId}:
+    get:
+      operationId: getById_2
+      parameters:
+      - explode: false
+        in: path
+        name: clientId
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Client'
+          description: OK
+      tags:
+      - client-controller
+      x-accepts: '*/*'
+  /api/v1/clinic/clients/getall:
+    get:
+      operationId: showAll_2
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                items:
+                  $ref: '#/components/schemas/Client'
+                type: array
+          description: OK
+      tags:
+      - client-controller
+      x-accepts: '*/*'
+  /api/v1/clinic/pets/delete/{petId}:
+    delete:
+      operationId: delete
+      parameters:
+      - explode: false
+        in: path
+        name: petId
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                format: int32
+                type: integer
+          description: OK
+      tags:
+      - pet-controller
+      x-accepts: '*/*'
+  /api/v1/clinic/consultations/delete/{consultationId}:
+    delete:
+      operationId: delete_1
+      parameters:
+      - explode: false
+        in: path
+        name: consultationId
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                format: int32
+                type: integer
+          description: OK
+      tags:
+      - consultation-controller
+      x-accepts: '*/*'
+  /api/v1/clinic/clients/delete/{clientId}:
+    delete:
+      operationId: delete_2
+      parameters:
+      - explode: false
+        in: path
+        name: clientId
+        required: true
+        schema:
+          format: int32
+          type: integer
+        style: simple
+      responses:
+        "200":
+          content:
+            '*/*':
+              schema:
+                format: int32
+                type: integer
+          description: OK
+      tags:
+      - client-controller
+      x-accepts: '*/*'
+components:
+  schemas:
+    PetRequest:
+      example:
+        birthday: 2000-01-23
+        clientId: 0
+        name: name
+      properties:
+        clientId:
+          format: int32
+          type: integer
+        name:
+          type: string
+        birthday:
+          format: date
+          type: string
+      type: object
+    ConsultationRequest:
+      example:
+        clientId: 0
+        petId: 6
+        consultationDate: 2000-01-23
+        description: description
+      properties:
+        clientId:
+          format: int32
+          type: integer
+        petId:
+          format: int32
+          type: integer
+        description:
+          type: string
+        consultationDate:
+          format: date
+          type: string
+      type: object
+    ClientRequest:
+      example:
+        birthday: 2000-01-23
+        firstname: firstname
+        patronymic: patronymic
+        surname: surname
+        document: document
+      properties:
+        document:
+          type: string
+        surname:
+          type: string
+        firstname:
+          type: string
+        patronymic:
+          type: string
+        birthday:
+          format: date
+          type: string
+      type: object
+    Pet:
+      example:
+        birthday: 2000-01-23
+        petId: 0
+        clientId: 6
+        name: name
+      properties:
+        petId:
+          format: int32
+          type: integer
+        clientId:
+          format: int32
+          type: integer
+        name:
+          type: string
+        birthday:
+          format: date
+          type: string
+      type: object
+    Consultation:
+      example:
+        clientId: 6
+        petId: 1
+        consultationDate: 2000-01-23
+        description: description
+        consultationId: 0
+      properties:
+        consultationId:
+          format: int32
+          type: integer
+        clientId:
+          format: int32
+          type: integer
+        petId:
+          format: int32
+          type: integer
+        description:
+          type: string
+        consultationDate:
+          format: date
+          type: string
+      type: object
+    Client:
+      example:
+        birthday: 2000-01-23
+        firstname: firstname
+        patronymic: patronymic
+        clientId: 0
+        surname: surname
+        document: document
+      properties:
+        clientId:
+          format: int32
+          type: integer
+        document:
+          type: string
+        surname:
+          type: string
+        firstname:
+          type: string
+        patronymic:
+          type: string
+        birthday:
+          format: date
+          type: string
+      type: object
+
